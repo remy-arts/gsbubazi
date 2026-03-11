@@ -4,56 +4,68 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>GS Bubazi — Excellence in Education | Rubengera, Karongi</title>
-  <meta name="description" content="GS Bubazi is a leading secondary school in Rubengera, Karongi, Rwanda offering Ordinary Level and Advanced Level programs in Mathematics and Science.">
+  <meta name="description" content="GS Bubazi is a leading secondary school in Rubengera, Karongi, Rwanda offering Ordinary Level and Advanced Level programs in Science.">
   <link rel="stylesheet" href="style.css">
+  <style>
+    .leader-img-wrap {
+      width: 80px; height: 80px; flex-shrink: 0;
+      border-radius: 50%;
+      border: 3px solid rgba(201,148,58,0.5);
+      overflow: hidden;
+      background: var(--navy-mid);
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Playfair Display', serif;
+      font-size: 22px; font-weight: 700;
+      color: var(--gold);
+      position: relative;
+    }
+    .leader-img-wrap img { width:100%;height:100%;object-fit:cover;position:absolute;inset:0; }
+    .hm-img-wrap {
+      width: 130px; height: 130px; flex-shrink: 0;
+      border-radius: 50%;
+      border: 3px solid var(--gold);
+      overflow: hidden;
+      background: var(--navy-light);
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Playfair Display', serif;
+      font-size: 38px; font-weight: 700;
+      color: var(--gold);
+      box-shadow: 0 0 20px rgba(201,148,58,0.3);
+      position: relative;
+    }
+    .hm-img-wrap img { width:100%;height:100%;object-fit:cover;position:absolute;inset:0; }
+    .accountant-row { display:flex;justify-content:center;margin-top:24px; }
+    .accountant-row .leader-card { max-width:380px;width:100%; }
+  </style>
 </head>
 <body>
-
-  <!-- CURSOR -->
   <div class="cursor"></div>
   <div class="cursor-ring"></div>
 
-  <!-- ══ NOTICE BOARD ══ -->
+  <!-- NOTICE BOARD -->
   <div class="notice-board">
     <button class="notice-toggle">📌</button>
     <div class="notice-content">
-      <div class="notice-header">
-        <span>Notice Board</span>
-        <div class="notice-dot"></div>
-      </div>
+      <div class="notice-header"><span>Notice Board</span><div class="notice-dot"></div></div>
       <div class="notice-items">
-        <div class="notice-item">
-          <div class="notice-item-date">Mar 10, 2025</div>
-          <div class="notice-item-text">Term 2 examinations begin Monday. All students must be present.</div>
-        </div>
-        <div class="notice-item">
-          <div class="notice-item-date">Mar 5, 2025</div>
-          <div class="notice-item-text">Science fair registration deadline extended to March 15th.</div>
-        </div>
-        <div class="notice-item">
-          <div class="notice-item-date">Feb 28, 2025</div>
-          <div class="notice-item-text">Sports day rescheduled to April 3rd. All participants to confirm.</div>
-        </div>
+        <div class="notice-item"><div class="notice-item-date">Mar 10, 2025</div><div class="notice-item-text">Term 2 examinations begin Monday. All students must be present.</div></div>
+        <div class="notice-item"><div class="notice-item-date">Mar 5, 2025</div><div class="notice-item-text">Science fair registration deadline extended to March 15th.</div></div>
+        <div class="notice-item"><div class="notice-item-date">Feb 28, 2025</div><div class="notice-item-text">Sports day rescheduled to April 3rd. All participants to confirm.</div></div>
       </div>
     </div>
   </div>
 
-  <!-- ══ NAVIGATION ══ -->
+  <!-- NAVIGATION -->
   <nav>
     <a href="#" class="nav-logo">
-      <svg class="nav-crest-svg" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <!-- Hexagonal crest -->
+      <svg class="nav-crest-svg" viewBox="0 0 60 60" fill="none">
         <polygon points="30,2 56,16 56,44 30,58 4,44 4,16" fill="#0d1f3c" stroke="#c9943a" stroke-width="1.5"/>
         <polygon points="30,8 50,20 50,40 30,52 10,40 10,20" fill="none" stroke="rgba(201,148,58,0.3)" stroke-width="0.8"/>
-        <!-- Torch flame -->
         <ellipse cx="30" cy="18" rx="5" ry="7" fill="none" stroke="#e8b84b" stroke-width="1.5"/>
         <path d="M27 16 Q30 10 33 16" fill="rgba(232,184,75,0.4)" stroke="#e8b84b" stroke-width="1"/>
-        <!-- Torch handle -->
         <rect x="28.5" y="24" width="3" height="10" rx="1" fill="#c9943a"/>
-        <!-- Open book -->
         <path d="M18 36 Q24 33 30 35 Q36 33 42 36 L42 44 Q36 41 30 43 Q24 41 18 44 Z" fill="none" stroke="#c9943a" stroke-width="1.5"/>
         <line x1="30" y1="35" x2="30" y2="43" stroke="#c9943a" stroke-width="1"/>
-        <!-- Stars -->
         <circle cx="14" cy="22" r="1.2" fill="#e8b84b" opacity="0.7"/>
         <circle cx="46" cy="22" r="1.2" fill="#e8b84b" opacity="0.7"/>
         <circle cx="30" cy="56" r="1" fill="#e8b84b" opacity="0.5"/>
@@ -63,7 +75,6 @@
         <span class="nav-brand-tagline">Rubengera · Karongi · Rwanda</span>
       </div>
     </a>
-
     <div class="nav-links">
       <a href="#about">About</a>
       <a href="#academics">Academics</a>
@@ -72,70 +83,43 @@
       <a href="#contact">Contact</a>
       <a href="explore.html" class="nav-explore-btn">Explore School</a>
     </div>
-
-    <button class="nav-hamburger" aria-label="Menu">
-      <span></span><span></span><span></span>
-    </button>
+    <button class="nav-hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
   </nav>
 
-  <!-- ══ HERO ══ -->
+  <!-- HERO -->
   <section id="hero">
     <canvas id="heroCanvas" class="hero-canvas"></canvas>
     <div class="hero-overlay"></div>
     <div class="hero-content">
-      <div class="hero-badge">
-        <div class="hero-badge-dot"></div>
-        <span>Est. in Rubengera, Karongi District</span>
-      </div>
-      <h1 class="hero-title">
-        GS Bubazi
-        <em>Shaping Tomorrow's Leaders</em>
-      </h1>
+      <div class="hero-badge"><div class="hero-badge-dot"></div><span>Est. in Rubengera, Karongi District</span></div>
+      <h1 class="hero-title">GS Bubazi<em>Shaping Tomorrow's Leaders</em></h1>
       <p class="hero-subtitle">Ordinary & Advanced Level Excellence</p>
       <div class="hero-divider"></div>
-      <p class="hero-desc">
-        A community of learners, thinkers, and innovators. Rooted in Rwandan values, 
-        driven by academic excellence, and committed to building the next generation 
-        of leaders across every discipline.
-      </p>
+      <p class="hero-desc">A community of learners, thinkers, and innovators. Rooted in Rwandan values, driven by academic excellence, and committed to building the next generation of leaders across every discipline.</p>
       <div class="hero-actions">
         <a href="#about" class="btn-gold">Discover Our School</a>
         <a href="explore.html" class="btn-outline">Explore Campus</a>
       </div>
     </div>
-    <div class="hero-scroll-hint">
-      <div class="hero-scroll-line"></div>
-      <span>Scroll</span>
-    </div>
+    <div class="hero-scroll-hint"><div class="hero-scroll-line"></div><span>Scroll</span></div>
   </section>
 
-  <!-- ══ STATS ══ -->
+  <!-- STATS -->
   <div id="stats">
     <div class="stats-grid">
-      <div class="stat-item reveal">
-        <span class="stat-number" data-target="450" data-suffix="+">0</span>
-        <span class="stat-label">Students Enrolled</span>
-      </div>
-      <div class="stat-item reveal reveal-delay-1">
-        <span class="stat-number" data-target="18" data-suffix="">0</span>
-        <span class="stat-label">Qualified Teachers</span>
-      </div>
-      <div class="stat-item reveal reveal-delay-2">
-        <span class="stat-number" data-target="92" data-suffix="%">0</span>
-        <span class="stat-label">National Pass Rate</span>
-      </div>
-      <div class="stat-item reveal reveal-delay-3">
-        <span class="stat-number" data-target="15" data-suffix="+">0</span>
-        <span class="stat-label">Years of Excellence</span>
-      </div>
+      <div class="stat-item reveal"><span class="stat-number" data-target="450" data-suffix="+">0</span><span class="stat-label">Students Enrolled</span></div>
+      <div class="stat-item reveal reveal-delay-1"><span class="stat-number" data-target="15" data-suffix="">0</span><span class="stat-label">Qualified Teachers</span></div>
+      <div class="stat-item reveal reveal-delay-2"><span class="stat-number" data-target="92" data-suffix="%">0</span><span class="stat-label">National Pass Rate</span></div>
+      <div class="stat-item reveal reveal-delay-3"><span class="stat-number" data-target="15" data-suffix="+">0</span><span class="stat-label">Years of Excellence</span></div>
     </div>
   </div>
 
-  <!-- ══ ABOUT ══ -->
+  <!-- ABOUT -->
   <section id="about">
     <div class="about-grid">
       <div class="about-image-wrap reveal">
         <div class="about-image-frame">
+          <!-- REPLACE: <img src="images/school.jpg" alt="GS Bubazi"> -->
           <div class="about-image-placeholder">
             <svg viewBox="0 0 24 24" fill="none" stroke-width="1"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9,22 9,12 15,12 15,22"/></svg>
             <span>School Photo</span>
@@ -144,831 +128,353 @@
         </div>
         <div class="about-image-badge">Est. Rubengera, Karongi</div>
       </div>
-
       <div class="about-content">
         <p class="section-label">About Our School</p>
         <h2 class="section-title">A Legacy of <em>Academic Excellence</em></h2>
-        <p class="section-desc">
-          GS Bubazi is a distinguished secondary school nestled in the heart of Rubengera, 
-          Karongi District, Western Rwanda. Our institution stands as a beacon of 
-          quality education, nurturing brilliant minds through a rigorous curriculum 
-          and a values-driven environment.
-        </p>
-        <p class="section-desc" style="margin-top:16px;">
-          We believe every student carries extraordinary potential. Our dedicated staff, 
-          modern teaching methods, and strong community ties create the ideal conditions 
-          for students to discover, grow, and excel.
-        </p>
-
+        <p class="section-desc">GS Bubazi is a distinguished secondary school nestled in the heart of Rubengera, Karongi District, Western Rwanda. Our institution stands as a beacon of quality education, nurturing brilliant minds through a rigorous curriculum and a values-driven environment.</p>
+        <p class="section-desc" style="margin-top:16px;">We believe every student carries extraordinary potential. Our dedicated staff, modern teaching methods, and strong community ties create the ideal conditions for students to discover, grow, and excel.</p>
         <div class="about-values reveal reveal-delay-1">
-          <div class="about-value-card">
-            <span class="about-value-icon">🎯</span>
-            <div class="about-value-title">Our Mission</div>
-            <div class="about-value-text">To provide quality, inclusive education that empowers every student to achieve their highest potential.</div>
-          </div>
-          <div class="about-value-card">
-            <span class="about-value-icon">🔭</span>
-            <div class="about-value-title">Our Vision</div>
-            <div class="about-value-text">To be the leading secondary school in Karongi, recognized for academic distinction and character development.</div>
-          </div>
-          <div class="about-value-card">
-            <span class="about-value-icon">⚖️</span>
-            <div class="about-value-title">Integrity</div>
-            <div class="about-value-text">We uphold the highest standards of honesty, transparency, and ethical conduct in all we do.</div>
-          </div>
-          <div class="about-value-card">
-            <span class="about-value-icon">🤝</span>
-            <div class="about-value-title">Community</div>
-            <div class="about-value-text">Strong partnerships with families, local leaders, and Rwanda's broader educational community.</div>
-          </div>
+          <div class="about-value-card"><span class="about-value-icon">🎯</span><div class="about-value-title">Our Mission</div><div class="about-value-text">To provide quality, inclusive education that empowers every student to achieve their highest potential.</div></div>
+          <div class="about-value-card"><span class="about-value-icon">🔭</span><div class="about-value-title">Our Vision</div><div class="about-value-text">To be the leading secondary school in Karongi, recognized for academic distinction and character development.</div></div>
+          <div class="about-value-card"><span class="about-value-icon">⚖️</span><div class="about-value-title">Integrity</div><div class="about-value-text">We uphold the highest standards of honesty, transparency, and ethical conduct in all we do.</div></div>
+          <div class="about-value-card"><span class="about-value-icon">🤝</span><div class="about-value-title">Community</div><div class="about-value-text">Strong partnerships with families, local leaders, and Rwanda's broader educational community.</div></div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ══ ACADEMICS ══ -->
+  <!-- ACADEMICS -->
   <section id="academics">
     <div class="academics-header reveal">
-      <div>
-        <p class="section-label">Curriculum</p>
-        <h2 class="section-title light">Our Academic <em>Programs</em></h2>
-      </div>
-      <p class="section-desc light" style="max-width:360px; margin:0;">
-        Rigorous programs aligned with Rwanda's national curriculum and REB standards.
-      </p>
+      <div><p class="section-label">Curriculum</p><h2 class="section-title light">Our Academic <em>Programs</em></h2></div>
+      <p class="section-desc light" style="max-width:360px;margin:0;">Rigorous programs aligned with Rwanda's national curriculum and REB standards.</p>
     </div>
-
-    <div class="academics-grid">
+    <div class="academics-grid" style="grid-template-columns:1fr 1fr;">
       <div class="academic-card reveal">
         <div class="academic-card-number">01</div>
         <div class="academic-card-icon">📚</div>
         <div class="academic-card-level">Lower Secondary</div>
         <h3 class="academic-card-title">Ordinary Level</h3>
-        <p class="academic-card-desc">
-          A comprehensive foundation covering core disciplines. Students develop critical 
-          thinking, language proficiency, and scientific understanding across all subjects.
-        </p>
+        <p class="academic-card-desc">A comprehensive foundation covering core disciplines. Students develop critical thinking, language proficiency, and scientific understanding across all subjects.</p>
         <div class="academic-card-subjects">
-          <span class="subject-tag">Mathematics</span>
-          <span class="subject-tag">English</span>
-          <span class="subject-tag">Kinyarwanda</span>
-          <span class="subject-tag">Sciences</span>
-          <span class="subject-tag">Geography</span>
-          <span class="subject-tag">History</span>
+          <span class="subject-tag">Mathematics</span><span class="subject-tag">English</span><span class="subject-tag">Kinyarwanda</span><span class="subject-tag">Sciences</span><span class="subject-tag">Geography</span><span class="subject-tag">History</span><span class="subject-tag">Entrepreneurship</span><span class="subject-tag">Computer Science</span>
         </div>
       </div>
-
-     
-
-      <div class="academic-card reveal reveal-delay-2">
+      <div class="academic-card reveal reveal-delay-1">
         <div class="academic-card-number">02</div>
         <div class="academic-card-icon">🔬</div>
-        <div class="academic-card-level">Upper Secondary — Stream 2</div>
+        <div class="academic-card-level">Upper Secondary — Science Stream</div>
         <h3 class="academic-card-title">Advanced Level Science</h3>
-        <p class="academic-card-desc">
-          Intensive study of the physical sciences. Graduates are 
-          prepared for careers in engineering, research, and technology.
-        </p>
+        <p class="academic-card-desc">Intensive study of the physical sciences. Graduates are prepared for careers in engineering, medicine, research, and technology.</p>
         <div class="academic-card-subjects">
-          <span class="subject-tag">Mathematics</span>
-          <span class="subject-tag">Physics</span>
-          <span class="subject-tag">Geography</span>
-          <span class="subject-tag">Economics</span>
+          <span class="subject-tag">Mathematics</span><span class="subject-tag">Physics</span><span class="subject-tag">Geography</span><span class="subject-tag">Economics</span>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ══ STAFF ══ -->
+  <!-- STAFF -->
   <section id="staff">
-    <p class="section-label reveal">Administrative staff</p>
+    <p class="section-label reveal">Our People</p>
     <h2 class="section-title reveal">Meet the <em>Team</em></h2>
     <p class="section-desc reveal">Dedicated professionals committed to nurturing every student's potential.</p>
 
     <div class="staff-leadership" style="margin-top:50px;">
 
-      <!-- HEADMASTER -->
+      <!-- HEADTEACHER -->
+      <!-- IMAGE: put headteacher photo as images/headteacher.jpg, then replace "NJ" text with: <img src="images/headteacher.jpg" alt="Mr. NYANDWI Joseph"> -->
       <div class="headmaster-card reveal">
-        <div class="staff-avatar">NJ</div>
+        <div class="hm-img-wrap">NJ</div>
         <div class="headmaster-info">
           <h3 class="headmaster-name">Mr. NYANDWI Joseph</h3>
           <div class="headmaster-role">Headteacher — GS Bubazi</div>
-          <p class="headmaster-quote">
-            "Our goal is not merely to educate students, but to inspire them — 
-            to build confident, compassionate, and capable young Rwandans ready 
-            to shape the future of our nation."
-          </p>
+          <p class="headmaster-quote">"Our goal is not merely to educate students, but to inspire them — to build confident, compassionate, and capable young Rwandans ready to shape the future of our nation."</p>
           <div class="staff-contact-row">
             <div class="staff-contact-item">
               <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.5 1.18 2 2 0 012.49 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.18 6.18l.77-.77a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 15.5z"/></svg>
-              +250 788 100 001
+              +250 788 412 305
             </div>
             <div class="staff-contact-item">
               <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-              headmaster@gsbubazi.rw
+              nyandwi.joseph@gsbubazi.rw
             </div>
           </div>
         </div>
       </div>
 
       <!-- DOS & DOD -->
+      <!-- IMAGE DOS: replace "BA" with <img src="images/dos.jpg" alt="BYUKUSENGE Alexis"> inside .leader-img-wrap -->
+      <!-- IMAGE DOD: replace "BO" with <img src="images/dod.jpg" alt="BYIRINGIRO Olivier"> inside .leader-img-wrap -->
       <div class="leadership-pair">
         <div class="leader-card reveal">
-          <div class="staff-avatar">NB</div>
+          <div class="leader-img-wrap">BA</div>
           <div>
-            <div class="leader-name">Ms. Nzayisenga Brigitte</div>
+            <div class="leader-name">Mr. BYUKUSENGE Alexis</div>
             <div class="leader-role">Director of Studies (DOS)</div>
             <div class="leader-contacts">
-              <div class="leader-contact-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81"/></svg>
-                +250 788 100 002
-              </div>
-              <div class="leader-contact-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-                dos@gsbubazi.rw
-              </div>
+              <div class="leader-contact-item"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81"/></svg>+250 782 651 904</div>
+              <div class="leader-contact-item"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>byukusenge.alexis@gsbubazi.rw</div>
             </div>
           </div>
         </div>
-
         <div class="leader-card reveal reveal-delay-1">
-          <div class="staff-avatar">RM</div>
+          <div class="leader-img-wrap">BO</div>
           <div>
-            <div class="leader-name">Mr. Rurangwa Marcel</div>
+            <div class="leader-name">Mr. BYIRINGIRO Olivier</div>
             <div class="leader-role">Director of Discipline (DOD)</div>
             <div class="leader-contacts">
-              <div class="leader-contact-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81"/></svg>
-                +250 788 100 003
-              </div>
-              <div class="leader-contact-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-                dod@gsbubazi.rw
-              </div>
+              <div class="leader-contact-item"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81"/></svg>+250 788 374 216</div>
+              <div class="leader-contact-item"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>byiringiro.olivier@gsbubazi.rw</div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-<div class="leader-card reveal reveal-delay-1">
-          <div class="staff-avatar">RM</div>
+
+      <!-- ACCOUNTANT -->
+      <div class="accountant-row">
+        <div class="leader-card reveal">
+          <div class="leader-img-wrap" style="font-size:18px;">G</div>
           <div>
-            <div class="leader-name">Mr. Rurangwa Marcel</div>
+            <div class="leader-name">Ms. Gissele</div>
             <div class="leader-role">Accountant</div>
             <div class="leader-contacts">
-              <div class="leader-contact-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81"/></svg>
-                +250 788 100 003
-              </div>
-              <div class="leader-contact-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-                accountant@gsbubazi.rw
-              </div>
+              <div class="leader-contact-item"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81"/></svg>+250 788 290 447</div>
+              <div class="leader-contact-item"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>gissele@gsbubazi.rw</div>
             </div>
           </div>
         </div>
       </div>
     </div>
+
     <!-- TEACHERS -->
     <div class="teachers-header reveal">
       <h3>Teaching Staff & Patron</h3>
       <div class="teachers-header-line"></div>
-      <span style="font-size:12px;color:var(--text-light);white-space:nowrap;">Hover to see contact</span>
+      <span style="font-size:12px;color:var(--text-light);white-space:nowrap;">Hover card to see contact</span>
     </div>
 
     <div class="teachers-grid">
-      <!-- Teacher cards — 14 teachers + matron -->
-      <!-- Each card flips to show contact info on hover -->
 
+      <!-- Helper macro: front shows name + subject, back shows name + subject + phone + email -->
+
+      <!-- HABIMANA François -->
       <div class="teacher-card reveal">
         <div class="teacher-card-inner">
-          <div class="teacher-card-front">
-            <div class="staff-avatar">KJ</div>
-            <div class="teacher-front-name">Mr. Kalisa Jean</div>
-            <div class="teacher-front-subject">Mathematics</div>
-          </div>
-          <div class="teacher-card-back">
-            <div class="teacher-back-name">Mr. Kalisa Jean</div>
-            <div class="teacher-back-role">Mathematics Teacher</div>
-            <div class="teacher-back-divider"></div>
-            <div class="teacher-back-contacts">
-              <div class="teacher-back-contact">
-                <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07"/></svg>
-                +250 788 200 001
-              </div>
-              <div class="teacher-back-contact">
-                <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4"/><polyline points="22,6 12,13 2,6"/></svg>
-                k.jean@gsbubazi.rw
-              </div>
-            </div>
-          </div>
+          <div class="teacher-card-front"><div class="staff-avatar">HF</div><div class="teacher-front-name">Mr. HABIMANA François</div><div class="teacher-front-subject">Entrepreneurship</div></div>
+          <div class="teacher-card-back"><div class="teacher-back-name">Mr. HABIMANA François</div><div class="teacher-back-role">Entrepreneurship</div><div class="teacher-back-divider"></div><div class="teacher-back-contacts"><div class="teacher-back-contact"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07"/></svg>+250 788 543 729</div><div class="teacher-back-contact"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4"/><polyline points="22,6 12,13 2,6"/></svg>habimana.francois@gsbubazi.rw</div></div></div>
         </div>
       </div>
 
+      <!-- BIZIMANA Pascal -->
       <div class="teacher-card reveal reveal-delay-1">
         <div class="teacher-card-inner">
-          <div class="teacher-card-front">
-            <div class="staff-avatar">UM</div>
-            <div class="teacher-front-name">Ms. Uwimana Marie</div>
-            <div class="teacher-front-subject">Biology</div>
-          </div>
-          <div class="teacher-card-back">
-            <div class="teacher-back-name">Ms. Uwimana Marie</div>
-            <div class="teacher-back-role">Biology Teacher</div>
-            <div class="teacher-back-divider"></div>
-            <div class="teacher-back-contacts">
-              <div class="teacher-back-contact">
-                <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07"/></svg>
-                +250 788 200 002
-              </div>
-              <div class="teacher-back-contact">
-                <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4"/><polyline points="22,6 12,13 2,6"/></svg>
-                u.marie@gsbubazi.rw
-              </div>
-            </div>
-          </div>
+          <div class="teacher-card-front"><div class="staff-avatar">BP</div><div class="teacher-front-name">Mr. BIZIMANA Pascal</div><div class="teacher-front-subject">Biology</div></div>
+          <div class="teacher-card-back"><div class="teacher-back-name">Mr. BIZIMANA Pascal</div><div class="teacher-back-role">Biology</div><div class="teacher-back-divider"></div><div class="teacher-back-contacts"><div class="teacher-back-contact"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07"/></svg>+250 788 204 851</div><div class="teacher-back-contact"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4"/><polyline points="22,6 12,13 2,6"/></svg>bizimana.pascal@gsbubazi.rw</div></div></div>
         </div>
       </div>
 
+      <!-- NDAYAMBAJE Samuel -->
       <div class="teacher-card reveal reveal-delay-2">
         <div class="teacher-card-inner">
-          <div class="teacher-card-front">
-            <div class="staff-avatar">NP</div>
-            <div class="teacher-front-name">Mr. Nkurunziza Pierre</div>
-            <div class="teacher-front-subject">Chemistry</div>
-          </div>
-          <div class="teacher-card-back">
-            <div class="teacher-back-name">Mr. Nkurunziza Pierre</div>
-            <div class="teacher-back-role">Chemistry Teacher</div>
-            <div class="teacher-back-divider"></div>
-            <div class="teacher-back-contacts">
-              <div class="teacher-back-contact">
-                <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07"/></svg>
-                +250 788 200 003
-              </div>
-              <div class="teacher-back-contact">
-                <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4"/><polyline points="22,6 12,13 2,6"/></svg>
-                n.pierre@gsbubazi.rw
-              </div>
-            </div>
-          </div>
+          <div class="teacher-card-front"><div class="staff-avatar">NS</div><div class="teacher-front-name">Mr. NDAYAMBAJE Samuel</div><div class="teacher-front-subject">Mathematics</div></div>
+          <div class="teacher-card-back"><div class="teacher-back-name">Mr. NDAYAMBAJE Samuel</div><div class="teacher-back-role">Mathematics</div><div class="teacher-back-divider"></div><div class="teacher-back-contacts"><div class="teacher-back-contact"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07"/></svg>+250 782 317 064</div><div class="teacher-back-contact"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4"/><polyline points="22,6 12,13 2,6"/></svg>ndayambaje.samuel@gsbubazi.rw</div></div></div>
         </div>
       </div>
 
+      <!-- HAKUZIMANA Vedaste -->
       <div class="teacher-card reveal">
         <div class="teacher-card-inner">
-          <div class="teacher-card-front">
-            <div class="staff-avatar">MG</div>
-            <div class="teacher-front-name">Ms. Mukamana Grace</div>
-            <div class="teacher-front-subject">Physics</div>
-          </div>
-          <div class="teacher-card-back">
-            <div class="teacher-back-name">Ms. Mukamana Grace</div>
-            <div class="teacher-back-role">Physics Teacher</div>
-            <div class="teacher-back-divider"></div>
-            <div class="teacher-back-contacts">
-              <div class="teacher-back-contact">
-                <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07"/></svg>
-                +250 788 200 004
-              </div>
-              <div class="teacher-back-contact">
-                <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4"/><polyline points="22,6 12,13 2,6"/></svg>
-                m.grace@gsbubazi.rw
-              </div>
-            </div>
-          </div>
+          <div class="teacher-card-front"><div class="staff-avatar">HV</div><div class="teacher-front-name">Mr. HAKUZIMANA Vedaste</div><div class="teacher-front-subject">Physics</div></div>
+          <div class="teacher-card-back"><div class="teacher-back-name">Mr. HAKUZIMANA Vedaste</div><div class="teacher-back-role">Physics</div><div class="teacher-back-divider"></div><div class="teacher-back-contacts"><div class="teacher-back-contact"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07"/></svg>+250 788 156 723</div><div class="teacher-back-contact"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4"/><polyline points="22,6 12,13 2,6"/></svg>hakuzimana.vedaste@gsbubazi.rw</div></div></div>
         </div>
       </div>
 
+      <!-- SEBUHORO Zachée -->
       <div class="teacher-card reveal reveal-delay-1">
         <div class="teacher-card-inner">
-          <div class="teacher-card-front">
-            <div class="staff-avatar">BE</div>
-            <div class="teacher-front-name">Mr. Bizimana Eric</div>
-            <div class="teacher-front-subject">English</div>
-          </div>
-          <div class="teacher-card-back">
-            <div class="teacher-back-name">Mr. Bizimana Eric</div>
-            <div class="teacher-back-role">English Teacher</div>
-            <div class="teacher-back-divider"></div>
-            <div class="teacher-back-contacts">
-              <div class="teacher-back-contact">
-                <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07"/></svg>
-                +250 788 200 005
-              </div>
-              <div class="teacher-back-contact">
-                <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4"/><polyline points="22,6 12,13 2,6"/></svg>
-                b.eric@gsbubazi.rw
-              </div>
-            </div>
-          </div>
+          <div class="teacher-card-front"><div class="staff-avatar">SZ</div><div class="teacher-front-name">Mr. SEBUHORO Zachée</div><div class="teacher-front-subject">Languages</div></div>
+          <div class="teacher-card-back"><div class="teacher-back-name">Mr. SEBUHORO Zachée</div><div class="teacher-back-role">Languages</div><div class="teacher-back-divider"></div><div class="teacher-back-contacts"><div class="teacher-back-contact"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07"/></svg>+250 788 491 230</div><div class="teacher-back-contact"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4"/><polyline points="22,6 12,13 2,6"/></svg>sebuhoro.zachee@gsbubazi.rw</div></div></div>
         </div>
       </div>
 
+      <!-- SHUMBUSHO Dieudonné -->
       <div class="teacher-card reveal reveal-delay-2">
         <div class="teacher-card-inner">
-          <div class="teacher-card-front">
-            <div class="staff-avatar">HF</div>
-            <div class="teacher-front-name">Ms. Hakizimana Fifi</div>
-            <div class="teacher-front-subject">Kinyarwanda</div>
-          </div>
-          <div class="teacher-card-back">
-            <div class="teacher-back-name">Ms. Hakizimana Fifi</div>
-            <div class="teacher-back-role">Kinyarwanda Teacher</div>
-            <div class="teacher-back-divider"></div>
-            <div class="teacher-back-contacts">
-              <div class="teacher-back-contact">
-                <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07"/></svg>
-                +250 788 200 006
-              </div>
-              <div class="teacher-back-contact">
-                <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4"/><polyline points="22,6 12,13 2,6"/></svg>
-                h.fifi@gsbubazi.rw
-              </div>
-            </div>
-          </div>
+          <div class="teacher-card-front"><div class="staff-avatar">SD</div><div class="teacher-front-name">Mr. SHUMBUSHO Dieudonné</div><div class="teacher-front-subject">Computer Science</div></div>
+          <div class="teacher-card-back"><div class="teacher-back-name">Mr. SHUMBUSHO Dieudonné</div><div class="teacher-back-role">Computer Science</div><div class="teacher-back-divider"></div><div class="teacher-back-contacts"><div class="teacher-back-contact"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07"/></svg>+250 782 084 367</div><div class="teacher-back-contact"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4"/><polyline points="22,6 12,13 2,6"/></svg>shumbusho.dieudonne@gsbubazi.rw</div></div></div>
         </div>
       </div>
 
+      <!-- MUSANGWA Bernard -->
       <div class="teacher-card reveal">
         <div class="teacher-card-inner">
-          <div class="teacher-card-front">
-            <div class="staff-avatar">IJ</div>
-            <div class="teacher-front-name">Mr. Iyamuremye Justin</div>
-            <div class="teacher-front-subject">Geography</div>
-          </div>
-          <div class="teacher-card-back">
-            <div class="teacher-back-name">Mr. Iyamuremye Justin</div>
-            <div class="teacher-back-role">Geography Teacher</div>
-            <div class="teacher-back-divider"></div>
-            <div class="teacher-back-contacts">
-              <div class="teacher-back-contact">
-                <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07"/></svg>
-                +250 788 200 007
-              </div>
-              <div class="teacher-back-contact">
-                <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4"/><polyline points="22,6 12,13 2,6"/></svg>
-                i.justin@gsbubazi.rw
-              </div>
-            </div>
-          </div>
+          <div class="teacher-card-front"><div class="staff-avatar">MB</div><div class="teacher-front-name">Mr. MUSANGWA Bernard</div><div class="teacher-front-subject">Languages</div></div>
+          <div class="teacher-card-back"><div class="teacher-back-name">Mr. MUSANGWA Bernard</div><div class="teacher-back-role">Languages</div><div class="teacher-back-divider"></div><div class="teacher-back-contacts"><div class="teacher-back-contact"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07"/></svg>+250 788 730 192</div><div class="teacher-back-contact"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4"/><polyline points="22,6 12,13 2,6"/></svg>musangwa.bernard@gsbubazi.rw</div></div></div>
         </div>
       </div>
 
+      <!-- MUKARUSANGA Marie Adrie -->
       <div class="teacher-card reveal reveal-delay-1">
         <div class="teacher-card-inner">
-          <div class="teacher-card-front">
-            <div class="staff-avatar">NK</div>
-            <div class="teacher-front-name">Ms. Nyiraneza Keza</div>
-            <div class="teacher-front-subject">History</div>
-          </div>
-          <div class="teacher-card-back">
-            <div class="teacher-back-name">Ms. Nyiraneza Keza</div>
-            <div class="teacher-back-role">History Teacher</div>
-            <div class="teacher-back-divider"></div>
-            <div class="teacher-back-contacts">
-              <div class="teacher-back-contact">
-                <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07"/></svg>
-                +250 788 200 008
-              </div>
-              <div class="teacher-back-contact">
-                <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4"/><polyline points="22,6 12,13 2,6"/></svg>
-                n.keza@gsbubazi.rw
-              </div>
-            </div>
-          </div>
+          <div class="teacher-card-front"><div class="staff-avatar">MM</div><div class="teacher-front-name">Ms. MUKARUSANGA Marie Adrie</div><div class="teacher-front-subject">Languages</div></div>
+          <div class="teacher-card-back"><div class="teacher-back-name">Ms. MUKARUSANGA Marie Adrie</div><div class="teacher-back-role">Languages</div><div class="teacher-back-divider"></div><div class="teacher-back-contacts"><div class="teacher-back-contact"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07"/></svg>+250 788 562 841</div><div class="teacher-back-contact"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4"/><polyline points="22,6 12,13 2,6"/></svg>mukarusanga.marie@gsbubazi.rw</div></div></div>
         </div>
       </div>
 
+      <!-- UWAMAHORO Adeline -->
       <div class="teacher-card reveal reveal-delay-2">
         <div class="teacher-card-inner">
-          <div class="teacher-card-front">
-            <div class="staff-avatar">MB</div>
-            <div class="teacher-front-name">Mr. Munyaneza Bob</div>
-            <div class="teacher-front-subject">Economics</div>
-          </div>
-          <div class="teacher-card-back">
-            <div class="teacher-back-name">Mr. Munyaneza Bob</div>
-            <div class="teacher-back-role">Economics Teacher</div>
-            <div class="teacher-back-divider"></div>
-            <div class="teacher-back-contacts">
-              <div class="teacher-back-contact">
-                <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07"/></svg>
-                +250 788 200 009
-              </div>
-              <div class="teacher-back-contact">
-                <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4"/><polyline points="22,6 12,13 2,6"/></svg>
-                m.bob@gsbubazi.rw
-              </div>
-            </div>
-          </div>
+          <div class="teacher-card-front"><div class="staff-avatar">UA</div><div class="teacher-front-name">Ms. UWAMAHORO Adeline</div><div class="teacher-front-subject">Languages</div></div>
+          <div class="teacher-card-back"><div class="teacher-back-name">Ms. UWAMAHORO Adeline</div><div class="teacher-back-role">Languages</div><div class="teacher-back-divider"></div><div class="teacher-back-contacts"><div class="teacher-back-contact"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07"/></svg>+250 782 418 653</div><div class="teacher-back-contact"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4"/><polyline points="22,6 12,13 2,6"/></svg>uwamahoro.adeline@gsbubazi.rw</div></div></div>
         </div>
       </div>
 
+      <!-- DUSHIMIMANA Félicité -->
       <div class="teacher-card reveal">
         <div class="teacher-card-inner">
-          <div class="teacher-card-front">
-            <div class="staff-avatar">UA</div>
-            <div class="teacher-front-name">Ms. Uwamariya Alice</div>
-            <div class="teacher-front-subject">ICT</div>
-          </div>
-          <div class="teacher-card-back">
-            <div class="teacher-back-name">Ms. Uwamariya Alice</div>
-            <div class="teacher-back-role">ICT Teacher</div>
-            <div class="teacher-back-divider"></div>
-            <div class="teacher-back-contacts">
-              <div class="teacher-back-contact">
-                <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07"/></svg>
-                +250 788 200 010
-              </div>
-              <div class="teacher-back-contact">
-                <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4"/><polyline points="22,6 12,13 2,6"/></svg>
-                u.alice@gsbubazi.rw
-              </div>
-            </div>
-          </div>
+          <div class="teacher-card-front"><div class="staff-avatar">DF</div><div class="teacher-front-name">Ms. DUSHIMIMANA Félicité</div><div class="teacher-front-subject">Chemistry</div></div>
+          <div class="teacher-card-back"><div class="teacher-back-name">Ms. DUSHIMIMANA Félicité</div><div class="teacher-back-role">Chemistry</div><div class="teacher-back-divider"></div><div class="teacher-back-contacts"><div class="teacher-back-contact"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07"/></svg>+250 788 345 907</div><div class="teacher-back-contact"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4"/><polyline points="22,6 12,13 2,6"/></svg>dushimimana.felicite@gsbubazi.rw</div></div></div>
         </div>
       </div>
 
+      <!-- MUSABENDE Issabelle -->
       <div class="teacher-card reveal reveal-delay-1">
         <div class="teacher-card-inner">
-          <div class="teacher-card-front">
-            <div class="staff-avatar">GS</div>
-            <div class="teacher-front-name">Mr. Gasana Samuel</div>
-            <div class="teacher-front-subject">French</div>
-          </div>
-          <div class="teacher-card-back">
-            <div class="teacher-back-name">Mr. Gasana Samuel</div>
-            <div class="teacher-back-role">French Teacher</div>
-            <div class="teacher-back-divider"></div>
-            <div class="teacher-back-contacts">
-              <div class="teacher-back-contact">
-                <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07"/></svg>
-                +250 788 200 011
-              </div>
-              <div class="teacher-back-contact">
-                <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4"/><polyline points="22,6 12,13 2,6"/></svg>
-                g.samuel@gsbubazi.rw
-              </div>
-            </div>
-          </div>
+          <div class="teacher-card-front"><div class="staff-avatar">MI</div><div class="teacher-front-name">Ms. MUSABENDE Issabelle</div><div class="teacher-front-subject">Economics</div></div>
+          <div class="teacher-card-back"><div class="teacher-back-name">Ms. MUSABENDE Issabelle</div><div class="teacher-back-role">Economics</div><div class="teacher-back-divider"></div><div class="teacher-back-contacts"><div class="teacher-back-contact"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07"/></svg>+250 788 673 124</div><div class="teacher-back-contact"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4"/><polyline points="22,6 12,13 2,6"/></svg>musabende.issabelle@gsbubazi.rw</div></div></div>
         </div>
       </div>
 
+      <!-- NYIRANSENGIMANA Mathilde -->
       <div class="teacher-card reveal reveal-delay-2">
         <div class="teacher-card-inner">
-          <div class="teacher-card-front">
-            <div class="staff-avatar">RV</div>
-            <div class="teacher-front-name">Ms. Rukundo Vestine</div>
-            <div class="teacher-front-subject">Religion / Ethics</div>
-          </div>
-          <div class="teacher-card-back">
-            <div class="teacher-back-name">Ms. Rukundo Vestine</div>
-            <div class="teacher-back-role">Religion & Ethics Teacher</div>
-            <div class="teacher-back-divider"></div>
-            <div class="teacher-back-contacts">
-              <div class="teacher-back-contact">
-                <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07"/></svg>
-                +250 788 200 012
-              </div>
-              <div class="teacher-back-contact">
-                <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4"/><polyline points="22,6 12,13 2,6"/></svg>
-                r.vestine@gsbubazi.rw
-              </div>
-            </div>
-          </div>
+          <div class="teacher-card-front"><div class="staff-avatar">NM</div><div class="teacher-front-name">Ms. NYIRANSENGIMANA Mathilde</div><div class="teacher-front-subject">History</div></div>
+          <div class="teacher-card-back"><div class="teacher-back-name">Ms. NYIRANSENGIMANA Mathilde</div><div class="teacher-back-role">History</div><div class="teacher-back-divider"></div><div class="teacher-back-contacts"><div class="teacher-back-contact"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07"/></svg>+250 782 509 836</div><div class="teacher-back-contact"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4"/><polyline points="22,6 12,13 2,6"/></svg>nyiransengimana.mathilde@gsbubazi.rw</div></div></div>
         </div>
       </div>
 
+      <!-- UWINEZA Louise -->
       <div class="teacher-card reveal">
         <div class="teacher-card-inner">
-          <div class="teacher-card-front">
-            <div class="staff-avatar">KP</div>
-            <div class="teacher-front-name">Mr. Kwizera Patrick</div>
-            <div class="teacher-front-subject">Physical Education</div>
-          </div>
-          <div class="teacher-card-back">
-            <div class="teacher-back-name">Mr. Kwizera Patrick</div>
-            <div class="teacher-back-role">P.E. Teacher</div>
-            <div class="teacher-back-divider"></div>
-            <div class="teacher-back-contacts">
-              <div class="teacher-back-contact">
-                <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07"/></svg>
-                +250 788 200 013
-              </div>
-              <div class="teacher-back-contact">
-                <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4"/><polyline points="22,6 12,13 2,6"/></svg>
-                k.patrick@gsbubazi.rw
-              </div>
-            </div>
-          </div>
+          <div class="teacher-card-front"><div class="staff-avatar">UL</div><div class="teacher-front-name">Ms. UWINEZA Louise</div><div class="teacher-front-subject">Biology</div></div>
+          <div class="teacher-card-back"><div class="teacher-back-name">Ms. UWINEZA Louise</div><div class="teacher-back-role">Biology</div><div class="teacher-back-divider"></div><div class="teacher-back-contacts"><div class="teacher-back-contact"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07"/></svg>+250 788 247 519</div><div class="teacher-back-contact"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4"/><polyline points="22,6 12,13 2,6"/></svg>uwineza.louise@gsbubazi.rw</div></div></div>
         </div>
       </div>
 
-      <!-- MATRON -->
+      <!-- Donath -->
       <div class="teacher-card reveal reveal-delay-1">
         <div class="teacher-card-inner">
-          <div class="teacher-card-front">
-            <div class="staff-avatar" style="border-color:var(--gold-bright);">BJ</div>
-            <div class="teacher-front-name">Mr. BANTU Javan</div>
-            <div class="teacher-front-subject" style="color:var(--gold-bright);">Patron</div>
-          </div>
-          <div class="teacher-card-back">
-            <div class="teacher-back-name">Mr</div>
-            <div class="teacher-back-role">School Patron</div>
-            <div class="teacher-back-divider"></div>
-            <div class="teacher-back-contacts">
-              <div class="teacher-back-contact">
-                <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07"/></svg>
-                +250 788 200 014
-              </div>
-              <div class="teacher-back-contact">
-                <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4"/><polyline points="22,6 12,13 2,6"/></svg>
-                patron@gsbubazi.rw
-              </div>
-            </div>
-          </div>
+          <div class="teacher-card-front"><div class="staff-avatar">D</div><div class="teacher-front-name">Mr. Donath</div><div class="teacher-front-subject">Mathematics</div></div>
+          <div class="teacher-card-back"><div class="teacher-back-name">Mr. Donath</div><div class="teacher-back-role">Mathematics</div><div class="teacher-back-divider"></div><div class="teacher-back-contacts"><div class="teacher-back-contact"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07"/></svg>+250 782 638 075</div><div class="teacher-back-contact"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4"/><polyline points="22,6 12,13 2,6"/></svg>donath@gsbubazi.rw</div></div></div>
         </div>
       </div>
+
+      <!-- Cansilde -->
+      <div class="teacher-card reveal reveal-delay-2">
+        <div class="teacher-card-inner">
+          <div class="teacher-card-front"><div class="staff-avatar">C</div><div class="teacher-front-name">Ms. Cansilde</div><div class="teacher-front-subject">Languages</div></div>
+          <div class="teacher-card-back"><div class="teacher-back-name">Ms. Cansilde</div><div class="teacher-back-role">Languages</div><div class="teacher-back-divider"></div><div class="teacher-back-contacts"><div class="teacher-back-contact"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07"/></svg>+250 788 183 642</div><div class="teacher-back-contact"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4"/><polyline points="22,6 12,13 2,6"/></svg>cansilde@gsbubazi.rw</div></div></div>
+        </div>
+      </div>
+
+      <!-- PATRON — BANTU Javan -->
+      <div class="teacher-card reveal">
+        <div class="teacher-card-inner">
+          <div class="teacher-card-front"><div class="staff-avatar" style="border-color:var(--gold-bright);">BJ</div><div class="teacher-front-name">Mr. BANTU Javan</div><div class="teacher-front-subject" style="color:var(--gold-bright);">Patron</div></div>
+          <div class="teacher-card-back"><div class="teacher-back-name">Mr. BANTU Javan</div><div class="teacher-back-role">School Patron</div><div class="teacher-back-divider"></div><div class="teacher-back-contacts"><div class="teacher-back-contact"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07"/></svg>+250 788 419 260</div><div class="teacher-back-contact"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4"/><polyline points="22,6 12,13 2,6"/></svg>patron@gsbubazi.rw</div></div></div>
+        </div>
+      </div>
+
     </div>
   </section>
 
-  <!-- ══ ACHIEVEMENTS ══ -->
+  <!-- ACHIEVEMENTS -->
   <section id="achievements">
     <div class="achievements-grid">
       <div class="achievement-block reveal">
         <h3><span>🏆</span> Honor Board</h3>
         <ul class="honor-list">
-          <li class="honor-item">
-            <div class="honor-rank">1st</div>
-            <div class="honor-info">
-              <div class="honor-name">Uwase Clarisse</div>
-              <div class="honor-detail">Advanced Level Science · 2024 National Exams</div>
-            </div>
-          </li>
-          <li class="honor-item">
-            <div class="honor-rank">2nd</div>
-            <div class="honor-info">
-              <div class="honor-name">Nzeyimana David</div>
-              <div class="honor-detail">Advanced Level Mathematics · 2024</div>
-            </div>
-          </li>
-          <li class="honor-item">
-            <div class="honor-rank">3rd</div>
-            <div class="honor-info">
-              <div class="honor-name">Ingabire Solange</div>
-              <div class="honor-detail">Ordinary Level · Top District Score 2024</div>
-            </div>
-          </li>
-          <li class="honor-item">
-            <div class="honor-rank">4th</div>
-            <div class="honor-info">
-              <div class="honor-name">Habimana Thierry</div>
-              <div class="honor-detail">Advanced Level Mathematics · 2023</div>
-            </div>
-          </li>
-          <li class="honor-item">
-            <div class="honor-rank">5th</div>
-            <div class="honor-info">
-              <div class="honor-name">Mukeshimana Ange</div>
-              <div class="honor-detail">Ordinary Level · Best Student 2023</div>
-            </div>
-          </li>
+          <li class="honor-item"><div class="honor-rank">1st</div><div class="honor-info"><div class="honor-name">Uwase Clarisse</div><div class="honor-detail">Advanced Level Science · 2024 National Exams</div></div></li>
+          <li class="honor-item"><div class="honor-rank">2nd</div><div class="honor-info"><div class="honor-name">Nzeyimana David</div><div class="honor-detail">Advanced Level Science · 2024</div></div></li>
+          <li class="honor-item"><div class="honor-rank">3rd</div><div class="honor-info"><div class="honor-name">Ingabire Solange</div><div class="honor-detail">Ordinary Level · Top District Score 2024</div></div></li>
+          <li class="honor-item"><div class="honor-rank">4th</div><div class="honor-info"><div class="honor-name">Habimana Thierry</div><div class="honor-detail">Advanced Level Science · 2023</div></div></li>
+          <li class="honor-item"><div class="honor-rank">5th</div><div class="honor-info"><div class="honor-name">Mukeshimana Ange</div><div class="honor-detail">Ordinary Level · Best Student 2023</div></div></li>
         </ul>
       </div>
-
       <div class="achievement-block reveal reveal-delay-1">
         <h3><span>🥇</span> Awards & Recognition</h3>
         <div class="award-list">
-          <div class="award-item">
-            <div class="award-year">2024</div>
-            <div class="award-title">Best School in Karongi District</div>
-            <div class="award-desc">Recognized by the District Education Office for overall academic performance.</div>
-          </div>
-          <div class="award-item">
-            <div class="award-year">2023</div>
-            <div class="award-title">REB Excellence Award</div>
-            <div class="award-desc">Rwanda Education Board commendation for above-average pass rates.</div>
-          </div>
-          <div class="award-item">
-            <div class="award-year">2022</div>
-            <div class="award-title">Regional Science Fair — 1st Place</div>
-            <div class="award-desc">Students from A-Level Science claimed top honors at the Western Province fair.</div>
-          </div>
-          <div class="award-item">
-            <div class="award-year">2021</div>
-            <div class="award-title">Community Development Award</div>
-            <div class="award-desc">Honored for Umuganda contributions and school-community partnership programs.</div>
-          </div>
+          <div class="award-item"><div class="award-year">2024</div><div class="award-title">Best School in Karongi District</div><div class="award-desc">Recognized by the District Education Office for overall academic performance.</div></div>
+          <div class="award-item"><div class="award-year">2023</div><div class="award-title">REB Excellence Award</div><div class="award-desc">Rwanda Education Board commendation for above-average pass rates.</div></div>
+          <div class="award-item"><div class="award-year">2022</div><div class="award-title">Regional Science Fair — 1st Place</div><div class="award-desc">Students from A-Level Science claimed top honors at the Western Province fair.</div></div>
+          <div class="award-item"><div class="award-year">2021</div><div class="award-title">Community Development Award</div><div class="award-desc">Honored for Umuganda contributions and school-community partnership programs.</div></div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ══ NEWS & EVENTS ══ -->
+  <!-- NEWS & EVENTS -->
   <section id="news">
     <p class="section-label reveal">Latest Updates</p>
     <h2 class="section-title reveal">News & <em>Events</em></h2>
-
     <div class="news-events-grid">
       <div class="news-list">
-        <div class="news-card reveal">
-          <div class="news-date">
-            <span class="news-date-day">08</span>
-            <span class="news-date-month">Mar</span>
-          </div>
-          <div class="news-content">
-            <div class="news-category">Academics</div>
-            <h3 class="news-title">Term 2 National Mock Examination Results Announced</h3>
-            <p class="news-excerpt">GS Bubazi students achieved an outstanding 94% pass rate in the Term 2 mock examinations, surpassing the district average by 12 percentage points.</p>
-          </div>
-        </div>
-
-        <div class="news-card reveal reveal-delay-1">
-          <div class="news-date">
-            <span class="news-date-day">02</span>
-            <span class="news-date-month">Mar</span>
-          </div>
-          <div class="news-content">
-            <div class="news-category">Science & Innovation</div>
-            <h3 class="news-title">Students Qualify for Western Province Science Fair</h3>
-            <p class="news-excerpt">Three A-Level Science student teams have qualified to represent Karongi at the Western Province Science and Technology fair next month in Rusizi.</p>
-          </div>
-        </div>
-
-        <div class="news-card reveal reveal-delay-2">
-          <div class="news-date">
-            <span class="news-date-day">22</span>
-            <span class="news-date-month">Feb</span>
-          </div>
-          <div class="news-content">
-            <div class="news-category">School Life</div>
-            <h3 class="news-title">New Computer Lab Officially Opens at GS Bubazi</h3>
-            <p class="news-excerpt">Thanks to the joint efforts of the Parent-Teacher Association and district leadership, GS Bubazi now operates a modern 30-seat computer laboratory.</p>
-          </div>
-        </div>
+        <div class="news-card reveal"><div class="news-date"><span class="news-date-day">08</span><span class="news-date-month">Mar</span></div><div class="news-content"><div class="news-category">Academics</div><h3 class="news-title">Term 2 National Mock Examination Results Announced</h3><p class="news-excerpt">GS Bubazi students achieved an outstanding 94% pass rate, surpassing the district average by 12 percentage points.</p></div></div>
+        <div class="news-card reveal reveal-delay-1"><div class="news-date"><span class="news-date-day">02</span><span class="news-date-month">Mar</span></div><div class="news-content"><div class="news-category">Science & Innovation</div><h3 class="news-title">Students Qualify for Western Province Science Fair</h3><p class="news-excerpt">Three A-Level Science student teams have qualified to represent Karongi at the Western Province Science and Technology fair in Rusizi.</p></div></div>
+        <div class="news-card reveal reveal-delay-2"><div class="news-date"><span class="news-date-day">22</span><span class="news-date-month">Feb</span></div><div class="news-content"><div class="news-category">School Life</div><h3 class="news-title">New Computer Lab Officially Opens at GS Bubazi</h3><p class="news-excerpt">GS Bubazi now operates a modern 30-seat computer laboratory thanks to the Parent-Teacher Association and district leadership.</p></div></div>
       </div>
-
       <div class="events-sidebar reveal">
         <h3>Upcoming Events</h3>
         <div class="event-list">
-          <div class="event-item">
-            <div class="event-date-str">March 15, 2025</div>
-            <div class="event-name">Science Fair Registration Deadline</div>
-            <div class="event-meta">All participants must submit entries</div>
-          </div>
-          <div class="event-item">
-            <div class="event-date-str">March 20, 2025</div>
-            <div class="event-name">Term 2 Examinations Begin</div>
-            <div class="event-meta">Full attendance required</div>
-          </div>
-          <div class="event-item">
-            <div class="event-date-str">April 3, 2025</div>
-            <div class="event-name">Annual Sports Day</div>
-            <div class="event-meta">School grounds · All day</div>
-          </div>
-          <div class="event-item">
-            <div class="event-date-str">April 15, 2025</div>
-            <div class="event-name">Parent-Teacher Meeting</div>
-            <div class="event-meta">School hall · 9:00 AM</div>
-          </div>
-          <div class="event-item">
-            <div class="event-date-str">May 10, 2025</div>
-            <div class="event-name">Cultural Day & Talent Show</div>
-            <div class="event-meta">Main hall · Open to all</div>
-          </div>
+          <div class="event-item"><div class="event-date-str">March 15, 2025</div><div class="event-name">Science Fair Registration Deadline</div><div class="event-meta">All participants must submit entries</div></div>
+          <div class="event-item"><div class="event-date-str">March 20, 2025</div><div class="event-name">Term 2 Examinations Begin</div><div class="event-meta">Full attendance required</div></div>
+          <div class="event-item"><div class="event-date-str">April 3, 2025</div><div class="event-name">Annual Sports Day</div><div class="event-meta">School grounds · All day</div></div>
+          <div class="event-item"><div class="event-date-str">April 15, 2025</div><div class="event-name">Parent-Teacher Meeting</div><div class="event-meta">School hall · 9:00 AM</div></div>
+          <div class="event-item"><div class="event-date-str">May 10, 2025</div><div class="event-name">Cultural Day & Talent Show</div><div class="event-meta">Main hall · Open to all</div></div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ══ CLUBS ══ -->
+  <!-- CLUBS & ACTIVITIES -->
   <section id="clubs">
     <p class="section-label reveal" style="justify-content:center;">Student Life</p>
     <h2 class="section-title light reveal" style="text-align:center;">Clubs & <em>Activities</em></h2>
-    <p class="section-desc light reveal" style="text-align:center;margin:16px auto 0;">Beyond the classroom — building leaders, artists, and innovators.</p>
+    <p class="section-desc light reveal" style="text-align:center;margin:16px auto 0;">Beyond the classroom — building leaders, scientists, and innovators.</p>
+    <div class="clubs-grid" style="grid-template-columns:repeat(4,1fr);">
+      <div class="club-card reveal"><span class="club-icon">🔬</span><div class="club-name">Science Club</div><div class="club-desc">Experiments, projects, and preparation for national science competitions.</div></div>
+      <div class="club-card reveal reveal-delay-1"><span class="club-icon">📖</span><div class="club-name">English Club</div><div class="club-desc">Developing public speaking, debate, and English language proficiency.</div></div>
+      <div class="club-card reveal reveal-delay-2"><span class="club-icon">🌱</span><div class="club-name">Environment Club</div><div class="club-desc">Conservation, school garden, and climate awareness campaigns across the community.</div></div>
+      <div class="club-card reveal reveal-delay-3" style="border-color:rgba(201,148,58,0.4);"><span class="club-icon">⚽</span><div class="club-name">Sports Day</div><div class="club-desc">Annual inter-class competition in football, volleyball, and athletics — the most celebrated school event.</div></div>
+    </div>
+  </section>
 
-    <div class="clubs-grid">
-      <div class="club-card reveal">
-        <span class="club-icon">🔬</span>
-        <div class="club-name">Science Club</div>
-        <div class="club-desc">Experiments, projects, and preparation for national science competitions.</div>
-      </div>
-      <div class="club-card reveal reveal-delay-1">
-        <span class="club-icon">📖</span>
-        <div class="club-name">English Club</div>
-        <div class="club-desc">Developing critical thinking, public speaking, and literary appreciation.</div>
-      </div>
-      <div class="club-card reveal reveal-delay-2">
-        <span class="club-icon">⚽</span>
-        <div class="club-name">Sports Association</div>
-        <div class="club-desc">Football, basketball, volleyball — competing at district and provincial level.</div>
-      </div>
-      <div class="club-card reveal reveal-delay-3">
-        <span class="club-icon">🎭</span>
-        <div class="club-name">Arts & Culture</div>
-        <div class="club-desc">Music, drama, dance, and celebration of Rwandan cultural heritage.</div>
-      </div>
-     
-  <!-- ══ TESTIMONIALS ══ -->
+  <!-- TESTIMONIALS -->
   <section id="testimonials">
     <p class="section-label reveal">Voices</p>
     <h2 class="section-title reveal">What They <em>Say</em></h2>
     <div class="testimonials-grid">
-      <div class="testimonial-card reveal">
-        <div class="testimonial-stars">★★★★★</div>
-        <p class="testimonial-text">"GS Bubazi gave me more than a diploma. The teachers pushed us to think critically, to question, and to never stop learning. I am now studying engineering at UR because of the foundation built here."</p>
-        <div class="testimonial-author">
-          <div class="testimonial-avatar">AU</div>
-          <div>
-            <div class="testimonial-name">Amani Uwase</div>
-            <div class="testimonial-role">Alumni · University of Rwanda, Engineering</div>
-          </div>
-        </div>
-      </div>
-      <div class="testimonial-card reveal reveal-delay-1">
-        <div class="testimonial-stars">★★★★★</div>
-        <p class="testimonial-text">"As a parent, I am proud to see my daughter thrive here. The discipline is strong, the teachers are dedicated, and the school truly cares about every child's future."</p>
-        <div class="testimonial-author">
-          <div class="testimonial-avatar">MN</div>
-          <div>
-            <div class="testimonial-name">Mukandoli Nadège</div>
-            <div class="testimonial-role">Parent · Rubengera Sector</div>
-          </div>
-        </div>
-      </div>
-      <div class="testimonial-card reveal reveal-delay-2">
-        <div class="testimonial-stars">★★★★★</div>
-        <p class="testimonial-text">"The Science program at GS Bubazi is exceptional. Our students consistently outperform peers from other schools in provincial assessments. I am proud to teach here."</p>
-        <div class="testimonial-author">
-          <div class="testimonial-avatar">BT</div>
-          <div>
-            <div class="testimonial-name">Mr. Bizimana Théo</div>
-            <div class="testimonial-role">Chemistry Teacher · 8 years at GS Bubazi</div>
-          </div>
-        </div>
-      </div>
+      <div class="testimonial-card reveal"><div class="testimonial-stars">★★★★★</div><p class="testimonial-text">"GS Bubazi gave me more than a diploma. The teachers pushed us to think critically and never stop learning. I am now studying engineering at UR because of the foundation built here."</p><div class="testimonial-author"><div class="testimonial-avatar">AU</div><div><div class="testimonial-name">Amani Uwase</div><div class="testimonial-role">Alumni · University of Rwanda, Engineering</div></div></div></div>
+      <div class="testimonial-card reveal reveal-delay-1"><div class="testimonial-stars">★★★★★</div><p class="testimonial-text">"As a parent, I am proud to see my daughter thrive here. The discipline is strong, the teachers are dedicated, and the school truly cares about every child's future."</p><div class="testimonial-author"><div class="testimonial-avatar">MN</div><div><div class="testimonial-name">Mukandoli Nadège</div><div class="testimonial-role">Parent · Rubengera Sector</div></div></div></div>
+      <div class="testimonial-card reveal reveal-delay-2"><div class="testimonial-stars">★★★★★</div><p class="testimonial-text">"The Science program at GS Bubazi is exceptional. Our students consistently outperform peers from other schools in provincial assessments. I am proud to teach here."</p><div class="testimonial-author"><div class="testimonial-avatar">DF</div><div><div class="testimonial-name">Ms. DUSHIMIMANA Félicité</div><div class="testimonial-role">Chemistry Teacher · GS Bubazi</div></div></div></div>
     </div>
   </section>
 
-  <!-- ══ FAQ ══ -->
+  <!-- FAQ -->
   <section id="faq">
     <p class="section-label reveal">FAQs</p>
     <h2 class="section-title reveal">Frequently Asked <em>Questions</em></h2>
     <div class="faq-grid" style="margin-top:50px;">
-
-      <div class="faq-item reveal">
-        <button class="faq-question">
-          What levels does GS Bubazi offer?
-          <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
-        </button>
-        <div class="faq-answer"><p>GS Bubazi offers both Ordinary Level (O-Level) for lower secondary and Advanced Level (A-Level) in two streams: Mathematics and Science (MPC/PCB).</p></div>
-      </div>
-
-      <div class="faq-item reveal reveal-delay-1">
-        <button class="faq-question">
-          How do I enroll my child at GS Bubazi?
-          <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
-        </button>
-        <div class="faq-answer"><p>Enrollment is done through the national school placement system or by visiting the school office directly. Bring your child's academic transcripts, birth certificate, and a passport photo.</p></div>
-      </div>
-
-      <div class="faq-item reveal reveal-delay-2">
-        <button class="faq-question">
-          Does the school have boarding facilities?
-          <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
-        </button>
-        <div class="faq-answer"><p>Yes, GS Bubazi has only day sections. </p></div>
-      </div>
-
-      <div class="faq-item reveal reveal-delay-3">
-        <button class="faq-question">
-          What is the school's pass rate?
-          <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
-        </button>
-        <div class="faq-answer"><p>GS Bubazi consistently maintains a national exam pass rate above 90%, placing us among the top-performing schools in Karongi District year after year.</p></div>
-      </div>
-
-      <div class="faq-item reveal">
-        <button class="faq-question">
-          What extracurricular activities are available?
-          <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
-        </button>
-        <div class="faq-answer"><p>We offer a wide range of clubs including Science, Sports, Arts & Culture, ICT, Environment, Debate, Photography, and the Student Council.</p></div>
-      </div>
-
-      <div class="faq-item reveal reveal-delay-1">
-        <button class="faq-question">
-          How can I contact a specific teacher?
-          <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
-        </button>
-        <div class="faq-answer"><p>You can find each teacher's phone number and email in the Staff section above. Alternatively, contact the school office and they will connect you with the relevant teacher.</p></div>
-      </div>
-
+      <div class="faq-item reveal"><button class="faq-question">What levels does GS Bubazi offer?<svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button><div class="faq-answer"><p>GS Bubazi offers both Ordinary Level (O-Level) for lower secondary and Advanced Level (A-Level) in the Science stream.</p></div></div>
+      <div class="faq-item reveal reveal-delay-1"><button class="faq-question">How do I enroll my child at GS Bubazi?<svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button><div class="faq-answer"><p>Enrollment is done through the national school placement system or by visiting the school office directly. Bring academic transcripts, birth certificate, and a passport photo.</p></div></div>
+      <div class="faq-item reveal reveal-delay-2"><button class="faq-question">Is GS Bubazi a day school or boarding school?<svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button><div class="faq-answer"><p>GS Bubazi is a day school only. All students attend classes during the day and return home in the evening.</p></div></div>
+      <div class="faq-item reveal reveal-delay-3"><button class="faq-question">What is the school's pass rate?<svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button><div class="faq-answer"><p>GS Bubazi consistently maintains a national exam pass rate above 90%, placing us among the top-performing schools in Karongi District.</p></div></div>
+      <div class="faq-item reveal"><button class="faq-question">What clubs and activities are available?<svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button><div class="faq-answer"><p>We offer Science Club, English Club, and Environment Club, plus an annual Sports Day that brings the whole school community together.</p></div></div>
+      <div class="faq-item reveal reveal-delay-1"><button class="faq-question">How can I contact a specific teacher?<svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button><div class="faq-answer"><p>Each teacher's phone and email is visible on their staff card above. You can also contact the school office to be connected with the right person.</p></div></div>
     </div>
   </section>
 
-  <!-- ══ AFFILIATIONS ══ -->
+  <!-- AFFILIATIONS -->
   <div id="affiliations">
     <div class="affiliations-label">Recognized & Affiliated With</div>
     <div class="affiliations-row">
@@ -980,97 +486,31 @@
     </div>
   </div>
 
-  <!-- ══ CONTACT ══ -->
+  <!-- CONTACT -->
   <section id="contact">
     <p class="section-label reveal">Get in Touch</p>
     <h2 class="section-title light reveal">Contact <em>Us</em></h2>
-
     <div class="contact-grid">
       <div class="contact-info-block reveal">
-        <div class="contact-info-item">
-          <div class="contact-icon-box">
-            <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          </div>
-          <div>
-            <div class="contact-info-label">Location</div>
-            <div class="contact-info-value">Rubengera Sector, Karongi District<br>Western Province, Rwanda</div>
-          </div>
-        </div>
-        <div class="contact-info-item">
-          <div class="contact-icon-box">
-            <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.5 1.18 2 2 0 012.49 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.18 6.18l.77-.77a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 15.5z"/></svg>
-          </div>
-          <div>
-            <div class="contact-info-label">Phone</div>
-            <div class="contact-info-value">+250 788 100 000<br>+250 722 100 000</div>
-          </div>
-        </div>
-        <div class="contact-info-item">
-          <div class="contact-icon-box">
-            <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-          </div>
-          <div>
-            <div class="contact-info-label">Email</div>
-            <div class="contact-info-value">info@gsbubazi.rw<br>headmaster@gsbubazi.rw</div>
-          </div>
-        </div>
-        <div class="contact-info-item">
-          <div class="contact-icon-box">
-            <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/></svg>
-          </div>
-          <div>
-            <div class="contact-info-label">Office Hours</div>
-            <div class="contact-info-value">Monday – Friday: 7:00 AM – 5:00 PM<br>Saturday: 8:00 AM – 12:00 PM</div>
-          </div>
-        </div>
-
-        <div class="contact-social">
-          <a href="#" class="social-btn">f</a>
-          <a href="#" class="social-btn">in</a>
-          <a href="#" class="social-btn">t</a>
-          <a href="#" class="social-btn">▶</a>
-        </div>
+        <div class="contact-info-item"><div class="contact-icon-box"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div><div><div class="contact-info-label">Location</div><div class="contact-info-value">Rubengera Sector, Karongi District<br>Western Province, Rwanda</div></div></div>
+        <div class="contact-info-item"><div class="contact-icon-box"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.5 1.18 2 2 0 012.49 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.18 6.18l.77-.77a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 15.5z"/></svg></div><div><div class="contact-info-label">Phone</div><div class="contact-info-value">+250 788 412 305<br>+250 782 651 904</div></div></div>
+        <div class="contact-info-item"><div class="contact-icon-box"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div><div><div class="contact-info-label">Email</div><div class="contact-info-value">info@gsbubazi.rw<br>nyandwi.joseph@gsbubazi.rw</div></div></div>
+        <div class="contact-info-item"><div class="contact-icon-box"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/></svg></div><div><div class="contact-info-label">Office Hours</div><div class="contact-info-value">Monday – Friday: 7:00 AM – 5:00 PM<br>Saturday: 8:00 AM – 12:00 PM</div></div></div>
+        <div class="contact-social"><a href="#" class="social-btn">f</a><a href="#" class="social-btn">in</a><a href="#" class="social-btn">t</a><a href="#" class="social-btn">▶</a></div>
       </div>
-
       <div class="reveal reveal-delay-1">
         <form class="contact-form" onsubmit="return false;">
-          <div class="form-row">
-            <div class="form-group">
-              <label>Full Name</label>
-              <input type="text" placeholder="Your full name">
-            </div>
-            <div class="form-group">
-              <label>Phone Number</label>
-              <input type="tel" placeholder="+250 7XX XXX XXX">
-            </div>
-          </div>
-          <div class="form-group">
-            <label>Email Address</label>
-            <input type="email" placeholder="your@email.com">
-          </div>
-          <div class="form-group">
-            <label>Subject</label>
-            <select>
-              <option value="">Select a subject</option>
-              <option>General Inquiry</option>
-              <option>Student Enrollment</option>
-              <option>Academic Programs</option>
-              <option>Staff Contact</option>
-              <option>Events & Activities</option>
-              <option>Other</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label>Message</label>
-            <textarea placeholder="Write your message here..."></textarea>
-          </div>
+          <div class="form-row"><div class="form-group"><label>Full Name</label><input type="text" placeholder="Your full name"></div><div class="form-group"><label>Phone Number</label><input type="tel" placeholder="+250 7XX XXX XXX"></div></div>
+          <div class="form-group"><label>Email Address</label><input type="email" placeholder="your@email.com"></div>
+          <div class="form-group"><label>Subject</label><select><option value="">Select a subject</option><option>General Inquiry</option><option>Student Enrollment</option><option>Academic Programs</option><option>Staff Contact</option><option>Events & Activities</option><option>Other</option></select></div>
+          <div class="form-group"><label>Message</label><textarea placeholder="Write your message here..."></textarea></div>
           <button type="submit" class="form-submit">Send Message</button>
         </form>
       </div>
     </div>
   </section>
 
-  <!-- ══ FOOTER ══ -->
+  <!-- FOOTER -->
   <footer>
     <div class="footer-top">
       <div class="footer-brand">
@@ -1080,20 +520,11 @@
       </div>
       <div class="footer-col">
         <h4>Quick Links</h4>
-        <a href="#about">About the School</a>
-        <a href="#academics">Academics</a>
-        <a href="#staff">Our Staff</a>
-        <a href="#achievements">Achievements</a>
-        <a href="#news">News & Events</a>
-        <a href="explore.html">Explore School</a>
+        <a href="#about">About the School</a><a href="#academics">Academics</a><a href="#staff">Our Staff</a><a href="#achievements">Achievements</a><a href="#news">News & Events</a><a href="explore.html">Explore School</a>
       </div>
       <div class="footer-col">
         <h4>Contact</h4>
-        <a href="#">Rubengera, Karongi District</a>
-        <a href="#">+250 788 100 000</a>
-        <a href="#">info@gsbubazi.rw</a>
-        <a href="#">Facebook Page</a>
-        <a href="#">YouTube Channel</a>
+        <a href="#">Rubengera, Karongi District</a><a href="#">+250 788 412 305</a><a href="#">info@gsbubazi.rw</a><a href="#">Facebook Page</a><a href="#">YouTube Channel</a>
       </div>
     </div>
     <div class="footer-bottom">
