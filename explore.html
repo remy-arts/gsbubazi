@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Explore GS Bubazi — Campus Gallery & Virtual Tour</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .explore-back-btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      color: rgba(255,255,255,0.5); text-decoration: none;
+      font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase;
+      font-weight: 500; transition: color 0.2s;
+      margin-bottom: 40px;
+    }
+    .explore-back-btn:hover { color: var(--gold-light); }
+    .explore-back-btn svg { width: 16px; height: 16px; stroke: currentColor; }
+
+    .explore-stats-row {
+      display: flex; gap: 40px; margin-top: 40px; flex-wrap: wrap;
+    }
+    .explore-stat {
+      display: flex; align-items: center; gap: 12px;
+    }
+    .explore-stat-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 28px; font-weight: 900; color: var(--gold-bright);
+    }
+    .explore-stat-label {
+      font-size: 11px; color: rgba(255,255,255,0.4);
+      text-transform: uppercase; letter-spacing: 0.12em;
+      line-height: 1.4;
+    }
+
+    /* lightbox */
+    .lightbox {
+      position: fixed; inset: 0; z-index: 2000;
+      background: rgba(8,15,30,0.97);
+      display: none; align-items: center; justify-content: center;
+      padding: 40px;
+    }
+    .lightbox.open { display: flex; }
+    .lightbox-inner {
+      max-width: 900px; width: 100%; position: relative;
+    }
+    .lightbox-img {
+      width: 100%; aspect-ratio: 16/9;
+      background: var(--navy-mid);
+      border: 1px solid var(--border);
+      border-radius: 2px;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .lightbox-caption {
+      text-align: center; margin-top: 20px;
+      font-family: 'Crimson Pro', serif;
+      font-size: 18px; color: rgba(255,255,255,0.6); font-style: italic;
+    }
+    .lightbox-close {
+      position: absolute; top: -50px; right: 0;
+      background: none; border: none; cursor: none;
+      color: rgba(255,255,255,0.5); font-size: 28px;
+      transition: color 0.2s;
+    }
+    .lightbox-close:hover { color: var(--gold); }
+  </style>
+</head>
+<body>
+
+  <div class="cursor"></div>
+  <div class="cursor-ring"></div>
+
+  <!-- NAV -->
+  <nav>
+    <a href="index.html" class="nav-logo">
+      <svg class="nav-crest-svg" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <polygon points="30,2 56,16 56,44 30,58 4,44 4,16" fill="#0d1f3c" stroke="#c9943a" stroke-width="1.5"/>
+        <polygon points="30,8 50,20 50,40 30,52 10,40 10,20" fill="none" stroke="rgba(201,148,58,0.3)" stroke-width="0.8"/>
+        <ellipse cx="30" cy="18" rx="5" ry="7" fill="none" stroke="#e8b84b" stroke-width="1.5"/>
+        <path d="M27 16 Q30 10 33 16" fill="rgba(232,184,75,0.4)" stroke="#e8b84b" stroke-width="1"/>
+        <rect x="28.5" y="24" width="3" height="10" rx="1" fill="#c9943a"/>
+        <path d="M18 36 Q24 33 30 35 Q36 33 42 36 L42 44 Q36 41 30 43 Q24 41 18 44 Z" fill="none" stroke="#c9943a" stroke-width="1.5"/>
+        <line x1="30" y1="35" x2="30" y2="43" stroke="#c9943a" stroke-width="1"/>
+        <circle cx="14" cy="22" r="1.2" fill="#e8b84b" opacity="0.7"/>
+        <circle cx="46" cy="22" r="1.2" fill="#e8b84b" opacity="0.7"/>
+      </svg>
+      <div class="nav-brand">
+        <span class="nav-brand-name">GS Bubazi</span>
+        <span class="nav-brand-tagline">Rubengera · Karongi · Rwanda</span>
+      </div>
+    </a>
+    <div class="nav-links">
+      <a href="index.html#about">About</a>
+      <a href="index.html#academics">Academics</a>
+      <a href="index.html#staff">Staff</a>
+      <a href="index.html#news">News</a>
+      <a href="index.html#contact">Contact</a>
+      <a href="explore.html" class="nav-explore-btn" style="color:var(--gold)!important;border-color:var(--gold)!important;">Explore School</a>
+    </div>
+    <button class="nav-hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- ══ EXPLORE HERO ══ -->
+  <div class="explore-hero">
+    <canvas id="heroCanvas" class="hero-canvas"></canvas>
+    <div class="hero-overlay"></div>
+    <div style="position:relative;z-index:2;width:100%;">
+      <a href="index.html" class="explore-back-btn">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+        Back to Main Site
+      </a>
+      <p class="section-label" style="color:var(--gold);">Campus Gallery</p>
+      <h1 style="font-family:'Playfair Display',serif;font-size:clamp(40px,5vw,72px);font-weight:900;color:var(--white);line-height:1.08;margin-bottom:16px;">
+        Explore <em style="color:var(--gold-light);font-style:italic;">GS Bubazi</em>
+      </h1>
+      <p style="font-family:'Crimson Pro',serif;font-size:19px;font-weight:300;color:rgba(255,255,255,0.55);max-width:520px;line-height:1.75;">
+        A visual journey through our campus, classrooms, events, and the everyday life 
+        that makes GS Bubazi a special place to learn and grow.
+      </p>
+      <div class="explore-stats-row">
+        <div class="explore-stat">
+          <div class="explore-stat-num">6+</div>
+          <div class="explore-stat-label">Campus<br>Buildings</div>
+        </div>
+        <div class="explore-stat">
+          <div class="explore-stat-num">30</div>
+          <div class="explore-stat-label">Computer<br>Lab Seats</div>
+        </div>
+        <div class="explore-stat">
+          <div class="explore-stat-num">2</div>
+          <div class="explore-stat-label">Science<br>Labs</div>
+        </div>
+        <div class="explore-stat">
+          <div class="explore-stat-num">1</div>
+          <div class="explore-stat-label">School<br>Library</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ GALLERY ══ -->
+  <section class="gallery-section">
+    <div class="gallery-filters">
+      <button class="filter-btn active" data-filter="all">All Photos</button>
+      <button class="filter-btn" data-filter="campus">Campus</button>
+      <button class="filter-btn" data-filter="classrooms">Classrooms</button>
+      <button class="filter-btn" data-filter="events">Events</button>
+      <button class="filter-btn" data-filter="sports">Sports</button>
+      <button class="filter-btn" data-filter="labs">Labs</button>
+    </div>
+
+    <div class="gallery-grid">
+
+      <div class="gallery-item reveal" data-category="campus" style="cursor:none;" onclick="openLightbox('School Main Entrance')">
+        <div class="gallery-placeholder">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21,15 16,10 5,21"/></svg>
+          <span>Main Entrance</span>
+        </div>
+        <div class="gallery-overlay">
+          <span class="gallery-label">🏫 Main Entrance — GS Bubazi</span>
+        </div>
+      </div>
+
+      <div class="gallery-item reveal reveal-delay-1" data-category="campus" onclick="openLightbox('School Administration Block')">
+        <div class="gallery-placeholder">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21,15 16,10 5,21"/></svg>
+          <span>Administration Block</span>
+        </div>
+        <div class="gallery-overlay">
+          <span class="gallery-label">🏛️ Administration Block</span>
+        </div>
+      </div>
+
+      <div class="gallery-item reveal reveal-delay-2" data-category="classrooms" onclick="openLightbox('Mathematics Classroom')">
+        <div class="gallery-placeholder">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21,15 16,10 5,21"/></svg>
+          <span>Mathematics Classroom</span>
+        </div>
+        <div class="gallery-overlay">
+          <span class="gallery-label">📐 Mathematics Classroom</span>
+        </div>
+      </div>
+
+      <div class="gallery-item reveal" data-category="labs" onclick="openLightbox('Science Laboratory')">
+        <div class="gallery-placeholder">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21,15 16,10 5,21"/></svg>
+          <span>Science Laboratory</span>
+        </div>
+        <div class="gallery-overlay">
+          <span class="gallery-label">🔬 Science Laboratory</span>
+        </div>
+      </div>
+
+      <div class="gallery-item reveal reveal-delay-1" data-category="labs" onclick="openLightbox('Computer Lab')">
+        <div class="gallery-placeholder">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21,15 16,10 5,21"/></svg>
+          <span>Computer Lab</span>
+        </div>
+        <div class="gallery-overlay">
+          <span class="gallery-label">💻 Computer Laboratory</span>
+        </div>
+      </div>
+
+      <div class="gallery-item reveal reveal-delay-2" data-category="campus" onclick="openLightbox('School Library')">
+        <div class="gallery-placeholder">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21,15 16,10 5,21"/></svg>
+          <span>School Library</span>
+        </div>
+        <div class="gallery-overlay">
+          <span class="gallery-label">📚 School Library</span>
+        </div>
+      </div>
+
+      <div class="gallery-item reveal" data-category="events" onclick="openLightbox('Cultural Day Celebration')">
+        <div class="gallery-placeholder">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21,15 16,10 5,21"/></svg>
+          <span>Cultural Day</span>
+        </div>
+        <div class="gallery-overlay">
+          <span class="gallery-label">🎭 Cultural Day Celebration</span>
+        </div>
+      </div>
+
+      <div class="gallery-item reveal reveal-delay-1" data-category="sports" onclick="openLightbox('Annual Sports Day')">
+        <div class="gallery-placeholder">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21,15 16,10 5,21"/></svg>
+          <span>Sports Day</span>
+        </div>
+        <div class="gallery-overlay">
+          <span class="gallery-label">⚽ Annual Sports Day</span>
+        </div>
+      </div>
+
+      <div class="gallery-item reveal reveal-delay-2" data-category="events" onclick="openLightbox('Prize Giving Ceremony')">
+        <div class="gallery-placeholder">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21,15 16,10 5,21"/></svg>
+          <span>Prize Giving Day</span>
+        </div>
+        <div class="gallery-overlay">
+          <span class="gallery-label">🏆 Prize Giving Ceremony</span>
+        </div>
+      </div>
+
+      <div class="gallery-item reveal" data-category="classrooms" onclick="openLightbox('Biology Class in Session')">
+        <div class="gallery-placeholder">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21,15 16,10 5,21"/></svg>
+          <span>Biology Class</span>
+        </div>
+        <div class="gallery-overlay">
+          <span class="gallery-label">🧬 Biology Class in Session</span>
+        </div>
+      </div>
+
+      <div class="gallery-item reveal reveal-delay-1" data-category="sports" onclick="openLightbox('Basketball Court')">
+        <div class="gallery-placeholder">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21,15 16,10 5,21"/></svg>
+          <span>Basketball Court</span>
+        </div>
+        <div class="gallery-overlay">
+          <span class="gallery-label">🏀 Basketball Court</span>
+        </div>
+      </div>
+
+      <div class="gallery-item reveal reveal-delay-2" data-category="events" onclick="openLightbox('Science Fair Exhibition')">
+        <div class="gallery-placeholder">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21,15 16,10 5,21"/></svg>
+          <span>Science Fair</span>
+        </div>
+        <div class="gallery-overlay">
+          <span class="gallery-label">🏅 Science Fair Exhibition</span>
+        </div>
+      </div>
+
+    </div>
+
+    <p style="text-align:center;margin-top:40px;font-family:'Crimson Pro',serif;font-size:16px;font-style:italic;color:var(--text-light);">
+      Replace placeholder images by adding your actual school photos. Each gallery item accepts a real image via CSS background or an &lt;img&gt; tag.
+    </p>
+  </section>
+
+  <!-- ══ VIRTUAL TOUR ══ -->
+  <section class="virtual-section">
+    <p class="section-label reveal" style="justify-content:center;">Experience</p>
+    <h2 class="section-title light reveal" style="text-align:center;">Virtual <em>Tour</em></h2>
+    <p class="section-desc light reveal" style="text-align:center;margin:16px auto 0;">
+      Take a guided video tour of our campus, facilities, and school life.
+    </p>
+    <div class="virtual-frame reveal">
+      <div class="virtual-play" onclick="alert('Add your YouTube/video embed link here')">▶</div>
+      <p>Click to watch the GS Bubazi Campus Tour</p>
+    </div>
+  </section>
+
+  <!-- ══ FOOTER ══ -->
+  <footer>
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="nav-brand-name">GS Bubazi</div>
+        <span class="nav-brand-tagline">Rubengera · Karongi · Rwanda</span>
+        <p>Shaping tomorrow's leaders through academic excellence, discipline, and Rwandan values.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navigate</h4>
+        <a href="index.html#about">About</a>
+        <a href="index.html#academics">Academics</a>
+        <a href="index.html#staff">Staff</a>
+        <a href="index.html#news">News & Events</a>
+        <a href="index.html#contact">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <a href="#">Rubengera, Karongi District</a>
+        <a href="#">+250 788 100 000</a>
+        <a href="#">info@gsbubazi.rw</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">© 2025 <span>GS Bubazi</span> · All rights reserved</div>
+      <a href="index.html" style="font-size:12px;color:var(--gold);text-decoration:none;">← Back to Main Site</a>
+    </div>
+  </footer>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <div class="lightbox-inner" onclick="event.stopPropagation()">
+      <button class="lightbox-close" onclick="closeLightbox()">✕</button>
+      <div class="lightbox-img">
+        <div style="text-align:center;color:rgba(255,255,255,0.2);">
+          <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1" opacity="0.3"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21,15 16,10 5,21"/></svg>
+        </div>
+      </div>
+      <div class="lightbox-caption" id="lightboxCaption"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    function openLightbox(caption) {
+      document.getElementById('lightbox').classList.add('open');
+      document.getElementById('lightboxCaption').textContent = caption;
+    }
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.remove('open');
+    }
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape') closeLightbox();
+    });
+  </script>
+</body>
+</html>
